@@ -1,8 +1,8 @@
 import timeit
 import multiprocessing
 
-cy = timeit.timeit('''example_cython.test(5000)''',setup='import example_cython',number=1)
-py = timeit.timeit('''example_original.test(5000)''',setup='import example_original', number=1)
+cy = timeit.timeit('''example_cython.test(5000)''',setup='import example_cython',number=1000)
+py = timeit.timeit('''example_original.test(5000)''',setup='import example_original', number=1000)
 
 print(f"Total CPU: {multiprocessing.cpu_count()}")
 
